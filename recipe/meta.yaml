@@ -9,12 +9,9 @@ package:
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 36e4e6636b3a5657b820aa1b0d01e5f1f3ff0e13bd5d82449f68d07403f411a4
-  patches:
-    - numpy.patch
 
 build:
   number: 0
-  skip: true  # [py<=38]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
